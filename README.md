@@ -29,4 +29,7 @@ By default, the application is set to run on [localhost:6500](localhost:6500)
 ### This project is licensed under the GNU General Public License v3.0
 
 Voyage is still under development, so expect bugs.
+This is currently a desktop-only site and doesn't work well on mobile devices.
+
+
 Kindly open issues if you find any!
