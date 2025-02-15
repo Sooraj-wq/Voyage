@@ -2,11 +2,12 @@
 
     display:flex;
     flex-direction: column;
+    left:0;
 }
 
 .content{
     display: grid;
-    grid-template-columns: 25em 25em 25em;
+    grid-template-columns: 25rem 25rem 25rem;
     grid-template-rows: repeat(auto-fill, minmax(150px, auto));
     gap:50px;
     justify-content: center;
@@ -17,6 +18,7 @@
     font-family:"Lexend",serif;
     margin-left: 10px;
 }
+
 
 .card{
     display: flex;
@@ -61,5 +63,32 @@
 
 .effect{
     color: violet;
+}
+
+
+@media(max-width:1366px){
+    .content{
+        grid-template-columns: 25rem 25rem;
+        gap:80px
+    }
+    .main-player-thumb{
+        height:100%;
+        width:100%;
+        border-radius: 10px;
+        background-color: rgb(24,24,24);
+    }
+}
+
+@media(max-width:900px){
+    .content{
+        grid-template-columns: 25rem;
+        gap:80px
+    }
+    .main-player-thumb{
+        height:100%;
+        width:100%;
+        border-radius: 10px;
+        background-color: rgb(24,24,24);
+    }
 }
 
