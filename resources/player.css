@@ -76,6 +76,10 @@
     overflow:hidden;
     text-overflow: ellipsis;
 }
+.playname:hover{
+    cursor:pointer;
+    text-decoration: underline;
+}
 
 .artistname{
     font-size: 14px;
@@ -122,6 +126,31 @@
     box-shadow: 0 0 5px rgba(0, 0, 0, 0.5);
 }
 
+
+@media(max-width:1300px){
+    .engine{
+        justify-content: flex-end;
+
+    }
+
+    .progress-bar{
+        width: 160px;
+    }
+    .bar{
+        grid-template-columns: 20px 180px 100px;
+        justify-content: center;
+        margin-right: 13rem;
+    }
+    .timer{
+        position:absolute;
+        margin-left: 21em;
+    }
+    .thumb{
+        width:200px;
+    }
+
+}
+
 @media(max-width:1400px){
     .engine{
         justify-content: flex-end;
@@ -132,23 +161,6 @@
         width:300px;
     }
 }
-
-@media(max-width:1200px){
-    .engine{
-        justify-content: flex-end;
-
-    }
-
-    .progress-bar{
-        width: 200px;
-    }
-    .bar{
-        margin-left:10rem;
-        grid-template-columns: 20px 220px 50px;
-        justify-content: center;
-    }
-}
-
 
 @media(min-width:1600px){
     .progress-bar{

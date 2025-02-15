@@ -218,26 +218,26 @@ async function geturl(codedurl){
 function sidebar(object,i){
     const thumb = document.querySelector('.iconholder');
 
-
-
-    thumb.addEventListener('click',()=>{
+    function setbar(){
         document.querySelector('.bar-container').innerHTML=`            <div class="side-bar">
-                    <button class="close">X</button>
-                    <img src="${object.results[i]?.image.replace('150x150', '500x500')}" class="sidebar-image">
-                    <div class="sidebar-title">${object.results[i]?.title}</div>
-                    <div class="sidebar-desc">${object.results[i]?.more_info.artistMap.primary_artists[0]?.name}</div>
-                    <div class="year">Year: ${object.results[i].year}</div>
-                    <div class="album">Album: ${object.results[i].more_info.album}</div>
-                </div>`;
-        if(object.results[i]?.more_info.artistMap.primary_artists[1]?.name){
-            document.querySelector('.sidebar-desc').innerHTML+=`, ${object.results[i]?.more_info.artistMap.primary_artists[1]?.name}` 
-        }
-        const close = document.querySelector('.close');
-        close.addEventListener('click',()=>{
+        <button class="close">X</button>
+        <img src="${object.results[i]?.image.replace('150x150', '500x500')}" class="sidebar-image">
+        <div class="sidebar-title">${object.results[i]?.title}</div>
+        <div class="sidebar-desc">${object.results[i]?.more_info.artistMap.primary_artists[0]?.name}</div>
+        <div class="year">Year: ${object.results[i].year}</div>
+        <div class="album">Album: ${object.results[i].more_info.album}</div>
+    </div>`;
+                if(object.results[i]?.more_info.artistMap.primary_artists[1]?.name){
+                document.querySelector('.sidebar-desc').innerHTML+=`, ${object.results[i]?.more_info.artistMap.primary_artists[1]?.name}` 
+                }
+                const close = document.querySelector('.close');
+                close.addEventListener('click',()=>{
                 document.querySelector('.bar-container').innerHTML=''
-         })
+                })
+    }
 
-    })
+    thumb.addEventListener('click',setbar);
+    playername.addEventListener('click',setbar);
     thumb.click();
 
 }
