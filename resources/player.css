@@ -1,6 +1,7 @@
 .engine {
-    display: flex;
-    justify-content: flex-end;
+    display: grid;
+    grid-template-columns: 350px 2fr 1fr 1fr;
+    justify-content: end;
     align-items: center;
     position: fixed;
     bottom: 0;
@@ -40,14 +41,16 @@
 .thumb{
     color: white;
     font-family: "Lexend",serif;
-    display: flex;
-    padding-left: 30px;
+    display: grid;
+    grid-template-columns: 175px 1fr;
     width:400px;
     align-items: center;
     gap:15px;
+
 }
 
 .iconholder{
+    margin-left: 115px;
     height: 65px;
     width: 65px;
 }
@@ -61,7 +64,7 @@
 
 .bar{
     display: grid;
-    grid-template-columns: 0.1fr 1fr 1fr;
+    grid-template-columns: 0.1fr 1fr 80px;
     margin-right: 10rem;
     margin-left: 12rem;
 
@@ -129,7 +132,7 @@
 
 @media(max-width:1300px){
     .engine{
-        justify-content: flex-end;
+        justify-content: end;
 
     }
 
@@ -144,9 +147,6 @@
     .timer{
         position:absolute;
         margin-left: 21em;
-    }
-    .thumb{
-        width:200px;
     }
 
 }
