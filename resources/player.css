@@ -176,7 +176,7 @@
         width: 500px;
     }
     .bar{
-        margin-left: 20rem;
+        padding-left: 5rem;
     }
 }
 
@@ -202,18 +202,19 @@
         height:150px;
     }
 }
+@media(min-width:3200px){
 
-@media(min-width:4000px){
-    .progress-bar{
-        width: 800px;
-    }
     .bar{
-        margin-right: 40rem;
+        padding-left: 25rem;
     }
 
-    .engine{
-        height:150px;
+}
+@media(min-width:3600px){
+
+    .bar{
+        padding-left: 30rem;
     }
+
 }
 
 
