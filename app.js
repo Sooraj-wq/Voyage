@@ -20,7 +20,14 @@ app.get('/api',async (req,res)=>{
     let {q} = req.query;
     q = q.replace(/ /g, '+');
     try{
-        const result = await fetch(`https://www.jiosaavn.com/api.php?p=1&q=${q}&_format=json&_marker=0&api_version=4&ctx=web6dot0&n=20&__call=search.getResults`);
+        const result = await fetch(`https://www.jiosaavn.com/api.php?p=1&q=${q}&_format=json&_marker=0&api_version=4&ctx=web6dot0&n=20&__call=search.getResults`, {
+            headers: {
+              'User-Agent': 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/58.0.3029.110 Safari/537.36',
+              'Referer': 'https://www.jiosaavn.com/', 
+              'Accept': 'application/json'
+            }
+          });
+        console.log(result);
         if(!result.ok){
             throw new Error('Couldnt fetch results');
         }else{
@@ -46,7 +53,13 @@ app.get('/getSong',async (req,res)=>{
 
 async function encurlfetch(id) {
     try{
-        let result = await fetch(`https://www.jiosaavn.com/api.php?__call=song.getDetails&pids=${id}&api_version=4&_format=json&_marker=0&ctx=web6dot0`);
+        let result = await fetch(`https://www.jiosaavn.com/api.php?__call=song.getDetails&pids=${id}&api_version=4&_format=json&_marker=0&ctx=web6dot0`, {
+            headers: {
+              'User-Agent': 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/58.0.3029.110 Safari/537.36',
+              'Referer': 'https://www.jiosaavn.com/', 
+              'Accept': 'application/json'
+            }
+          });
         if(!result.ok){
             throw new Error('Error fetching enc url');
         }else{
