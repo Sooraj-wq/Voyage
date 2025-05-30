@@ -9,6 +9,7 @@
     font-size: var(--size);
     user-select: none;
     fill: var(--color);
+    margin-left: 60%;
   }
   
   .container .play {
