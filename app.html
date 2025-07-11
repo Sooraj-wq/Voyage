@@ -25,12 +25,13 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Lexend:wght@100..900&display=swap" rel="stylesheet">
+    <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
 
 
 </head>
 <body class="">
     <div class="page">
-        <div class="header">
+        <div class="header fixed flex justify-between bg-[rgba(28,28,28,0.8)] backdrop-blur-[40px] h-28 w-full items-center px-[30px]">
             <div class="logo">Voyage</div>
             <div class="search">
                 <input type="text" class="searchbox" placeholder="Search">
@@ -64,7 +65,7 @@
 
 
         
-        <div class="engine">
+        <div class="engine fixed bottom-0 w-full h-[100px] grid justify-end items-center bg-[rgba(28,28,28,0.5)] backdrop-blur-[20px] shadow-[0px_0px_10px_rgba(0,0,0,0.5)]" style="grid-template-columns: 350px 2fr 200px 75px;">
             <div class="thumb">
                 <div class="iconholder">
                 </div>

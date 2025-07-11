@@ -3,18 +3,6 @@ body{
     background-color: rgb(24, 24, 24);
     overflow: auto;
 }
-.header{
-    position: fixed;
-    display:flex;
-    justify-content: space-between;
-    background-color: rgb(28, 28, 28,0.8);
-    backdrop-filter: blur(40px);
-    height:7rem;
-    width:100%;
-    align-items: center;
-    padding-left: 30px;
-    padding-right: 30px;
-}
 .search{
     display: flex;
     height: 3rem;

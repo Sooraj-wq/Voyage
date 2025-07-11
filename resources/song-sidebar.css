@@ -5,8 +5,8 @@
     align-items: center;
     position: fixed;
     right: 0px;
-    top:7em;
-    height: calc(100% - 100px - 7em);
+    top:0px;
+    height: 100%;
     overflow:auto;
     width:500px;
     background-color: rgb(24,24,24,0.5);
@@ -28,7 +28,7 @@
 }
 
 .sidebar-image{
-    margin-top: 40%;
+    margin-top: 20%;
     margin-bottom: 10px;
     height: 300px;
     width: 300px;
