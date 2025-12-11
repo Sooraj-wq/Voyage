@@ -82,14 +82,29 @@
 
 @media(max-width:900px){
     .content{
-        grid-template-columns: 25rem;
-        gap:80px
+        grid-template-columns: minmax(0, 1fr);
+        gap:40px;
+        padding: 0 20px;
+    }
+    .card {
+        width: 100%;
+        box-sizing: border-box;
+    }
+    .card:hover {
+        width: 100%;
     }
     .main-player-thumb{
         height:100%;
         width:100%;
         border-radius: 10px;
         background-color: rgb(24,24,24);
+    }
+    .status {
+        padding-left: 0;
+        text-align: center;
+        margin-right: 0;
+        font-size: 1.5em;
+        margin-top: 6em;
     }
 }
 
